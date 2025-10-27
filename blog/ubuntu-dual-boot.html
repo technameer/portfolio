@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= blog.title %> | <%= website.title %></title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- devicons css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- boxicons css -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- custom js -->
+    <script type="module" defer src="../scripts/app.js"></script>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="navbar_brand"><%= sections.nav.title %></a>
+        <button
+          title="Open Menu"
+          type="button"
+          class="navbar_toggler"
+          id="menuToggler"
+        >
+          <i class="bx bx-menu"></i>
+        </button>
+        <ul class="navbar_links" id="mobileMenu">
+          <% nav.forEach((item) => { %>
+          <li>
+            <a title="<%= item.title %>" href="/<%= item.link %>">
+              <%= item.title %>
+            </a>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- blog post content start -->
+    <article class="blog-post" style="padding: 6rem 0 4rem;">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <!-- Back button -->
+        <a 
+          href="/#blog" 
+          style="display: inline-flex; align-items: center; gap: 0.5rem; color: #6366f1; text-decoration: none; margin-bottom: 2rem; font-weight: 500;"
+        >
+          <i class="bx bx-arrow-back"></i> Back to Blog
+        </a>
+
+        <!-- Blog header -->
+        <div style="margin-bottom: 3rem;">
+          <div style="margin-bottom: 1rem;">
+            <% blog.tags.forEach((tag) => { %>
+            <span style="display: inline-block; background: #e0e7ff; color: #4338ca; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.875rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">
+              #<%= tag %>
+            </span>
+            <% }); %>
+          </div>
+          
+          <h1 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem; line-height: 1.2;">
+            <%= blog.title %>
+          </h1>
+          
+          <p style="color: #6b7280; font-size: 1rem;">
+            <i class="bx bx-calendar"></i> <%= new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+          </p>
+        </div>
+
+        <!-- Featured image -->
+        <div style="margin-bottom: 3rem; border-radius: 0.5rem; overflow: hidden;">
+          <img 
+            src="<%= blog.thumbnail %>" 
+            alt="<%= blog.title %>"
+            style="width: 100%; height: auto; display: block;"
+          />
+        </div>
+
+        <!-- Blog content -->
+        <div class="blog-content" style="line-height: 1.8; color: #374151; font-size: 1.125rem;">
+          <% blog.content.sections.forEach((section) => { %>
+            <% if (section.heading) { %>
+              <h2 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 1.5rem; margin-top: 3rem; color: #1f2937;">
+                <%= section.heading %>
+              </h2>
+            <% } %>
+            
+            <% if (section.text) { %>
+              <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+                <%= section.text %>
+              </p>
+            <% } %>
+
+            <% if (section.list) { %>
+              <ul style="list-style: none; margin-left: 0; margin-bottom: 2rem; padding: 0;">
+                <% section.list.forEach((item) => { %>
+                  <li style="margin-bottom: 1rem; padding: 1rem; background: #f9fafb; border-left: 3px solid #6366f1; border-radius: 0.25rem;">
+                    <code style="background: #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-family: 'Courier New', monospace; font-size: 1rem; color: #1f2937; font-weight: 600;">
+                      <%= item.command %>
+                    </code>
+                    <span style="display: block; margin-top: 0.5rem; color: #6b7280; font-size: 1rem;">
+                      <%= item.description %>
+                    </span>
+                  </li>
+                <% }); %>
+              </ul>
+            <% } %>
+          <% }); %>
+        </div>
+
+        <!-- Back to blog button -->
+        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+          <a 
+            href="/#blog" 
+            style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6366f1; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; transition: background 0.3s;"
+            onmouseover="this.style.background='#4f46e5'"
+            onmouseout="this.style.background='#6366f1'"
+          >
+            <i class="bx bx-arrow-back"></i> Back to All Posts
+          </a>
+        </div>
+      </div>
+    </article>
+    <!-- blog post content end -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer_text">
+          Copyright ©<%= new Date().getFullYear() %>. All rights are reserved
+        </p>
+
+        <div class="footer_links">
+          <% socials.forEach((item) => { %>
+          <a href="<%= item.link %>" title="<%= item.title %>">
+            <i class="<%= item.icon %>"></i>
+          </a>
+          <% }); %>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end -->
+  </body>
+</html>

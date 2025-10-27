@@ -1,0 +1,68 @@
+[
+  {
+    "title": "How I Installed Ubuntu Dual Boot with Windows",
+    "slug": "ubuntu-dual-boot",
+    "excerpt": "Setting up Ubuntu alongside Windows was an exciting journey into the world of Linux. Here's my step-by-step experience and the essential commands I learned along the way.",
+    "date": "2024-10-15",
+    "tags": ["linux", "ubuntu", "dualboot", "tutorial"],
+    "thumbnail": "/images/blog/ubuntu-dual-boot.jpg",
+    "content": {
+      "sections": [
+        {
+          "heading": "Preparation Steps",
+          "text": "Before installing Ubuntu, I backed up all my important data and created a bootable USB drive using Rufus. I also freed up around 50GB of space on my hard drive by shrinking my Windows partition using Disk Management."
+        },
+        {
+          "heading": "Installation Process",
+          "text": "I disabled Fast Startup in Windows and Secure Boot in BIOS settings. Then I booted from the USB drive and followed the Ubuntu installer, choosing \"Install Ubuntu alongside Windows\" option. The installer automatically handled the partitioning."
+        },
+        {
+          "heading": "Essential Linux Commands",
+          "text": "Here are some basic commands I use regularly:",
+          "list": [
+            {
+              "command": "sudo apt update",
+              "description": "Update package lists"
+            },
+            {
+              "command": "sudo apt upgrade",
+              "description": "Upgrade installed packages"
+            },
+            {
+              "command": "ls -la",
+              "description": "List all files with details"
+            },
+            {
+              "command": "cd ~/Documents",
+              "description": "Navigate to Documents folder"
+            },
+            {
+              "command": "mkdir folder_name",
+              "description": "Create a new directory"
+            },
+            {
+              "command": "rm file_name",
+              "description": "Remove a file"
+            },
+            {
+              "command": "sudo apt install package_name",
+              "description": "Install new software"
+            },
+            {
+              "command": "chmod +x file.sh",
+              "description": "Make a file executable"
+            }
+          ]
+        },
+        {
+          "heading": "Post-Installation Tips",
+          "text": "After installation, I updated all packages, installed essential software like Chrome and VS Code, and customized the desktop environment. The dual boot setup works flawlessly, and I can easily switch between Windows and Ubuntu using the GRUB bootloader."
+        },
+        {
+          "heading": "",
+          "text": "This setup has significantly improved my development workflow and introduced me to the powerful world of Linux command line tools."
+        }
+      ]
+    }
+  }
+]

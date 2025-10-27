@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "title": "NA"
+  },
+  "hero": {
+    "title": "Full-Stack Web Developer",
+    "text": "Hi, I'm Nameer Ahmad. A passionate Full-Stack web\n Developer from Kohat, Pakistan.",
+    "image": "/images/avatar/nameer.png"
+  },
+  "about": {
+    "title": "A dedicated Full-Stack Developer from Kohat Pakistan",
+    "text": "I love to solve problems and build web applications. I'm passionate about Full-Stack development. I have a good understanding in HTML, CSS, JavaScript, Vue js, PHP, Laravel and Wordpress. My main goal is creating smooth, interctive, & user friendly interface using best development tools & language.",
+    "subtitle": "About Me",
+    "image": "/images/about.webp"
+  },
+  "portfolio": {
+    "title": "Each project is a unique piece of development",
+    "subtitle": "BLOG"
+  },
+  "contact": {
+    "title": "Don't be shy! Hit me up! 👇",
+    "subtitle": "CONTACT"
+  }
+}

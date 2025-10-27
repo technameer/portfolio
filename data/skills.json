@@ -1,0 +1,13 @@
+[
+  { "title": "HTML", "icon": "devicon-html5-plain colored" },
+  { "title": "CSS", "icon": "devicon-css3-plain colored" },
+  { "title": "JavaScript", "icon": "devicon-javascript-plain colored" },
+  { "title": "PHP", "icon": "devicon-php-plain colored" },
+  { "title": "Laravel", "icon": "devicon-laravel-plain colored" },
+  { "title": "CodeIgniter", "icon": "devicon-codeigniter-plain colored" },
+  { "title": "Vue JS", "icon": "devicon-vuejs-plain colored" },
+  { "title": "WordPress", "icon": "devicon-wordpress-plain colored" },
+  { "title": "TailwindCSS", "icon": "devicon-tailwindcss-original colored" },
+  { "title": "Node JS", "icon": "devicon-nodejs-plain colored" },
+  { "title": "Express JS", "icon": "devicon-express-original colored" }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "icon": "bx bx-at",
+    "title": "Email",
+    "link": "mailto:technameer@gmail.com",
+    "text": "technameer@gmail.com"
+  },
+  {
+    "icon": "bx bxl-whatsapp",
+    "title": "WhatsApp",
+    "link": "tel:+3431198494",
+    "text": "+3431198494"
+  }
+]
