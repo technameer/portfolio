@@ -15,5 +15,8 @@
     "vite": "^4.2.0",
     "vite-plugin-html": "^3.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "marked": "^17.0.0"
+  }
 }

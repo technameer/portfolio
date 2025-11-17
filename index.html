@@ -19,7 +19,197 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <style>
+      /* Markdown Blog Content Styling */
+.blog-content {
+  line-height: 1.7;
+  color: #333;
+}
 
+.blog-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.blog-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.blog-content strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.blog-content em {
+  font-style: italic;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 2rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.blog-content li > ul,
+.blog-content li > ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content a {
+  color: #6366f1;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.blog-content a:hover {
+  color: #4f46e5;
+}
+
+.blog-content code {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+  color: #e83e8c;
+}
+
+.blog-content pre {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.blog-content pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: 0.95rem;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #6366f1;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #6b7280;
+  background-color: #f9fafb;
+  padding: 1rem 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2.5rem 0;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.blog-content table th,
+.blog-content table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.blog-content table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.blog-content table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-content h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.35rem;
+  }
+  
+  .blog-content p,
+  .blog-content li {
+    font-size: 1rem;
+  }
+  
+  .blog-content pre {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}
+    </style>
     <!-- boxicons css -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -161,42 +351,11 @@
 
     <!-- blog section end -->
 
-    <!-- contact section start -->
-    <div id="contact" class="contact bg-white">
-      <div class="container section">
-        <h3 class="section_subtitle mb-1"><%= sections.contact.subtitle %></h3>
-        <h2 class="section_title mb-5"><%= sections.contact.title %></h2>
-
-        <!-- contact cards -->
-        <div class="contact_cards mt-16">
-          <% contacts.forEach((contact) => { %>
-          <div class="contact_card">
-            <div class="contact_card_icon">
-              <i class="<%= contact.icon %> text-3xl md:text-4xl"></i>
-            </div>
-            <div class="contact_card_body">
-              <h2 class="contact_card_title"><%= contact.title %></h2>
-              <a
-                href="<%= contact.link %>"
-                target="_blank"
-                class="contact_card_text"
-                title="<%= contact.title  %>"
-              >
-                <%= contact.text %>
-              </a>
-            </div>
-          </div>
-          <% }); %>
-        </div>
-      </div>
-    </div>
-    <!-- contact section end -->
-
     <!-- footer section start -->
     <footer class="footer">
       <div class="container">
         <p class="footer_text">
-          Copyright ©<%= new Date().getFullYear() %>. All rights are reserved
+          Copyright ©<%= new Date().getFullYear() %>.
         </p>
 
         <div class="footer_links">

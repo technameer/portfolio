@@ -1,72 +1,18 @@
 [
   {
-    "title": "How I Installed Ubuntu Dual Boot with Windows",
-    "slug": "ubuntu-dual-boot",
-    "excerpt": "Setting up Ubuntu alongside Windows was an exciting journey into the world of Linux. Here's my step-by-step experience and the essential commands I learned along the way.",
-    "date": "2025-10-25",
-    "tags": ["linux", "ubuntu", "dualboot", "tutorial"],
-    "thumbnail": "/images/blog/ubuntu-dual-boot.jpg",
-    "content": {
-      "sections": [
-        {
-          "heading": "Preparation Steps",
-          "text": "I used to have windows in my system before installing linux. The first thing I did was that I shrinked 50GB space for linux insatllation and Backed up my important data to prevent losing it. "
-        },
-        {
-          "heading": "Installation Process",
-          "text": "I disabled Fast Startup in Windows and Secure Boot in BIOS settings. Then I booted from the USB drive and followed the Ubuntu installer, choosing \"Install Ubuntu alongside Windows\" option for the dual boot."
-        },
-        {
-          "heading": "Issue I faced",
-          "text": "When I decided to install Linux alongside Windows, I didn’t expect the boot mode to give me this much trouble. I had already freed up about 50 GB from one of my drives (not the one with Windows) to use for the Linux installation. Everything looked fine until I reached the part where I had to select the installation disk. Suddenly, the drive I had prepared wasn’t selectable.<br><br>While booting from the Linux installer, I noticed two boot options: one labeled UEFI and the other labeled Legacy. At the time, I wasn’t sure which one to pick, so I tried switching between them. That’s where things went wrong. The installer either didn’t detect my disk or refused to let me install Linux on it.<br><br>It turns out the problem was related to the difference between UEFI and Legacy BIOS boot modes. My Windows installation was using UEFI, but when I booted the Linux installer in Legacy mode, the system couldn’t see the disks properly because the modes didn’t match. Essentially, if Windows is installed in UEFI mode, then Linux must also be installed in UEFI mode for both systems to coexist smoothly. Mixing the two causes partition and bootloader issues.<br><br>After realizing this, I restarted the system and made sure to boot the Linux USB in UEFI mode only. Once I did that, the 50 GB unallocated space I had created appeared normally in the installer, and I was able to install Linux without any problem.\n"
-        },
-        {
-          "heading": "Essential Linux Commands",
-          "text": "Here are some basic commands I use now:",
-          "list": [
-            {
-              "command": "sudo apt update",
-              "description": "Update package lists"
-            },
-            {
-              "command": "sudo apt upgrade",
-              "description": "Upgrade installed packages"
-            },
-            {
-              "command": "ls -la",
-              "description": "List all files with details"
-            },
-            {
-              "command": "cd ~",
-              "description": "Navigate to root directory"
-            },
-            {
-              "command": "mkdir folder_name",
-              "description": "Create a new directory"
-            },
-            {
-              "command": "rm file_name",
-              "description": "Remove a file"
-            },
-            {
-              "command": "sudo apt install package_name",
-              "description": "Install new software"
-            },
-            {
-              "command": "chmod +x file.sh",
-              "description": "Make a file executable"
-            }
-          ]
-        },
-        {
-          "heading": "Post-Installation Tips",
-          "text": "After installation, I updated all packages, installed essential software like Chrome and VS Code, and customized the desktop environment. The dual boot setup works flawlessly, and I can easily switch between Windows and Ubuntu using the GRUB bootloader."
-        },
-        {
-          "heading": "",
-          "text": "This setup has significantly improved my development workflow and introduced me to the powerful world of Linux command line tools."
-        }
-      ]
-    }
+    "title": "Getting Started with Linux: A Personal Guide to Installation and Core Commands",
+    "slug": "getting-started-linux",
+    "excerpt": "I recently started using Linux and found it to be an amazing and powerful system. In this guide, I share installation steps and core commands to get you started.",
+    "date": "2025-01-17",
+    "tags": ["linux", "ubuntu", "tutorial", "commands", "installation"]
+  },
+  {
+    "title": "Introduction To Git and GitHub",
+    "slug": "git-and-github",
+    "excerpt": "Introduction To Git and GitHub with this detailed guide covering setup, commands, branches, repositories, and collaboration workflows.",
+    "date": "2025-11-17",
+    "tags": ["git", "github", "version-control", "tutorial", "commands", "branches", "repositories"]
   }
+
+
 ]
