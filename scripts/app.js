@@ -11,7 +11,6 @@ function extractSlugFromLocation() {
 
 async function loadMarkdownBlog(slug) {
   try {
-    console.log(slug)
     const res = await fetch(`/blogs/${slug}.md`);
     if (!res.ok) throw new Error('Blog not found');
     const md = await res.text();
